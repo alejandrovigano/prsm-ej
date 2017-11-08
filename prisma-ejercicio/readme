@@ -1,3 +1,49 @@
-Ingresar a:
+Aplicacion basada en spring boot + data jpa + hateoas + gradle
 
-http://localhost:8080/api
+- Expuesto:
+
+Buscar inmuebles por categoria
+  GET /inmueble?categoria={categoriaId}[&page&size&sort&dir]
+  
+Eliminar relacion inmueble/propietario
+  DELETE /inmueble/{idInmueble}/propietario
+
+Obtener inmueble
+  GET /inmueble/{idInmueble}
+ 
+Crear propietario
+  POST /propietario
+  
+Obtener propietario
+  GET /propietario/{idPropietario]
+  
+Actualizar propietario
+  PUT /propietario/{idPropietario} 
+
+
+- Properties a la db
+
+spring.datasource.url=jdbc:mysql://localhost:3306/prisma
+spring.datasource.username=root
+spring.datasource.password=root
+
+- DockerFile
+
+Agregue un docker file para levantar la aplicacion.
+La idea era cambiar las properties a algo del estilo:
+
+  spring.datasource.url=${db.url}
+  spring.datasource.username=${db.user}
+  spring.datasource.password=${db.password}
+
+y setear esas variables desde el environment de docker.
+Por temas de tiempo no puedo probarlo, asi que no lo inclui.
+
+-Solucion Alternativa
+
+Como solucion alternativa al requerimiento, se puede usar spring-data-rest, el cual genera los endpoints necesarios en base a los repositorios.
+
+   	// compile("org.springframework.data:spring-data-rest-webmvc") // solucion alternativa
+    // compile("org.springframework.data:spring-data-rest-hal-browser")
+
+No se utilizó la misma para poder hacer algo mas custom.
