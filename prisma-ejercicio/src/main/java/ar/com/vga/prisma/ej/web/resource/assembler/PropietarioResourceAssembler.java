@@ -33,7 +33,7 @@ public class PropietarioResourceAssembler extends ResourceAssemblerSupport<Propi
 		resource.setDomicilio(entity.getDomicilio());
 		resource.setFechaNacimiento(PrismaUtils.format(entity.getFechaNacimiento()));
 		resource.setSexo(entity.getSexo());
-		resource.setTeléfono(entity.getTeléfono());
+		resource.setTelefono(entity.getTelefono());
 
 		resource.setInmuebles(toResource(entity.getInmuebles()));
 

@@ -20,7 +20,7 @@ public class Propietario {
 	private String nombre;
 	private String apellido;
 	private String domicilio;
-	private String teléfono;
+	private String telefono;
 	private String sexo;
 	private Date fechaNacimiento;
 
@@ -48,12 +48,12 @@ public class Propietario {
 		this.domicilio = domicilio;
 	}
 
-	public String getTeléfono() {
-		return teléfono;
+	public String getTelefono() {
+		return telefono;
 	}
 
-	public void setTeléfono(String teléfono) {
-		this.teléfono = teléfono;
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 
 	public String getSexo() {

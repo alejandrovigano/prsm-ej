@@ -9,7 +9,7 @@ public class PropietarioResource extends ResourceSupport {
 	private String nombre;
 	private String apellido;
 	private String domicilio;
-	private String teléfono;
+	private String telefono;
 	private String sexo;
 	private String fechaNacimiento;
 
@@ -65,12 +65,12 @@ public class PropietarioResource extends ResourceSupport {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public String getTeléfono() {
-		return teléfono;
+	public String getTelefono() {
+		return telefono;
 	}
 
-	public void setTeléfono(String teléfono) {
-		this.teléfono = teléfono;
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 
 }

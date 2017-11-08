@@ -43,7 +43,7 @@ public class PropietarioServiceImpl implements PropietarioService {
 			propietarioOriginal.setDomicilio(propietario.getDomicilio());
 			propietarioOriginal.setFechaNacimiento(propietario.getFechaNacimiento());
 			propietarioOriginal.setSexo(propietario.getSexo());
-			propietarioOriginal.setTeléfono(propietario.getTeléfono());
+			propietarioOriginal.setTelefono(propietario.getTelefono());
 
 			Propietario propietarioActualizado = propietarioRepository.save(propietarioOriginal);
 			return Optional.of(propietarioActualizado);

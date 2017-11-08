@@ -1,4 +1,4 @@
-insert into propietario (id, nombre, apellido, domicilio, teléfono, sexo, fecha_nacimiento) values (1, 'Alejandro', 'Vigano', 'Calle falsa 123', '555–6528', 'M', '1992-01-01')
+insert into propietario (id, nombre, apellido, domicilio, telefono, sexo, fecha_nacimiento) values (1, 'Alejandro', 'Vigano', 'Calle falsa 123', '5556528', 'M', '1992-01-01')
 insert into categoria (id, descripcion) values (1, 'Casa')
 insert into categoria (id, descripcion) values (2, 'Departamento')
 insert into inmueble (descripcion, propietario_id, categoria_id) values ( 'Inmueble 1', 1, 1);
