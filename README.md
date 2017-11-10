@@ -46,6 +46,9 @@ Obtener categorias*
 -Ddb.url=jdbc:mysql://192.168.0.5:3306/prisma -Ddb.user=root -Ddb.password=root
 ```
 
+En ambos casos se corre el script import.sql que se encuentra en src/main/resources
+Propertie spring.jpa.hibernate.ddl-auto seteada en create
+
 ## Docker
 
 Correr gradle assemble|build y generar la imagen docker
@@ -61,9 +64,6 @@ docker run -p 8080:8080 -e JAVA_OPTS=-Dspring.profiles.active=inmemory image
 docker run -p 8080:8080 -e "JAVA_OPTS=-Ddb.url=jdbc:mysql://192.168.0.5:3306/prisma -Ddb.user=root -Ddb.password=root" image
 ```
 
-## Solucion Alternativa
-Como solucion alternativa al requerimiento, se puede usar spring-data-rest, el cual genera los endpoints necesarios en base a los repositorios.
-```
-   	// compile("org.springframework.data:spring-data-rest-webmvc") // solucion alternativa
-    // compile("org.springframework.data:spring-data-rest-hal-browser")
-```
+## Posman
+
+El archivo **Prisma Ejercicio.postman_collection.json** que se encuentra en el raiz del proyecto, se importa a postman, ya contiene los endpoint para probar

@@ -1,0 +1,163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Prisma Ejercicio",
+		"_postman_id": "ea6c2c1c-3316-03d3-d739-0c334adf2c95",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inmueble",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/inmueble",
+					"request": {
+						"url": "http://localhost:8080/inmueble",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Obtengo todos los inmuebles"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/inmueble?categoria=1",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/inmueble?categoria=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmueble"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Obtengo todos los inmuebles por categoria"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/inmueble/17",
+					"request": {
+						"url": "http://localhost:8080/inmueble/17",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Obtengo inmueble por id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/inmueble/1/propietario",
+					"request": {
+						"url": "http://localhost:8080/inmueble/1/propietario",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Alejandrox\",\n    \"apellido\": \"Vigano\",\n    \"domicilio\": \"Calle falsa 123\",\n    \"telefono\": \"5556528\",\n    \"sexo\": \"M\",\n    \"fechaNacimiento\": \"1992-11-30\"\n}"
+						},
+						"description": "Eliminar relacion con propietario"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/categoria",
+					"request": {
+						"url": "http://localhost:8080/categoria",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Obtengo todas las categorias"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Propietario",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/propietario/1",
+					"request": {
+						"url": "http://localhost:8080/propietario/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Obtengo propietario por id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/propietario",
+					"request": {
+						"url": "http://localhost:8080/propietario",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Alejandro\",\n    \"apellido\": \"Vigano\",\n    \"domicilio\": \"Calle falsa 123\",\n    \"telefono\": \"5556528\",\n    \"sexo\": \"M\",\n    \"fechaNacimiento\": \"1992-12-30\"\n}"
+						},
+						"description": "Crear propietario"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/propietario/3",
+					"request": {
+						"url": "http://localhost:8080/propietario/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Alejandro\",\n    \"apellido\": \"Vigano\",\n    \"domicilio\": \"Calle falsa 123\",\n    \"telefono\": \"5556528\",\n    \"sexo\": \"M\",\n    \"fechaNacimiento\": \"1992-12-31\"\n}"
+						},
+						"description": "Actualizar propietario"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
